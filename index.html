@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/style.css">
-  
+
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
+
 <body>
   <div class="bg-gradient">
     <div class="front-card">
-      <img src="./images/card-logo.svg" alt="card logo">
+      <img src="./styles/images/card-logo.svg" alt="card logo">
 
-      <div>0000 0000 0000 0000</div>
+      <div class="cardInfoContainer">
+        <div class="cardNum">0000 0000 0000 0000</div>
 
-      <div>
-        <span>Gabriel Massensini</span>
-        <span>00/00</span>
+        <div class="cardInfo">
+          <span>Gabriel Massensini</span>
+          <span>00/00</span>
+        </div>
       </div>
+
     </div>
 
     <div class="back-card">
@@ -43,7 +48,7 @@
               <input type="text" name="MM" id="expDate" placeholder="MM">
               <input type="text" name="YY" id="expDate" placeholder="YY">
             </div>
-            
+
           </div>
           <div>
             <label for="cvc">CVC</label>
@@ -55,11 +60,12 @@
       </form>
     </div>
   </div>
-  
+
 
   <!--Thank you!
   We've added your card details
   Continue-->
-  
+
 </body>
+
 </html>
