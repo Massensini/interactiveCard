@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+    border: none;
+    outline: none;
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
 }
@@ -88,5 +90,83 @@ body {
 
 .bg-white {
     width: 70vw;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 
+.formContainer {
+    width: 40%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: hsl(278, 68%, 11%);
+
+    margin-top: 15px;
+}
+
+input {
+    height: 40px;
+    margin-top: 7px;
+    padding: 0 5px 0 10px;
+
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+}
+
+.dateCvcContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dateInputContainer {
+    display: flex;   
+    gap: 15px;
+}
+
+#expDate {
+    width: 70px;
+}
+
+.cvcContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.dateContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-top: 20px;
+    height: 40px;
+
+    border-radius: 5px;
+    background: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.errorMsg {
+    display: none;
+    font-size: 12px;
+    margin-top: 3px;
+    color: hsl(0, 100%, 66%);
 }
