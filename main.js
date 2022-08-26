@@ -16,6 +16,7 @@ const cvcCard = document.querySelector('.cvcCard')
 const errorMsg = Array.from(document.querySelectorAll('.errorMsg'))
 
 const submitBtn = document.querySelector('#submit')
+const confirmBTn = document.querySelector('#confirm')
 
 function formData() {
 
@@ -28,6 +29,12 @@ function formData() {
             inp.classList.add('inputError')
             errorMsg[numErrorArray].classList.add('errorMsgActive')
         }
+
+        if (inp.value.length < len) {
+            inp.classList.add('inputError')
+            errorMsg[numErrorArray].innerHTML = `Minimum ${len} characters`
+            errorMsg[numErrorArray].classList.add('errorMsgActive')
+        }
     }
 
     function inputs() {
@@ -36,7 +43,7 @@ function formData() {
         })
 
         inputNumCard.addEventListener('input', () => {
-            dataEvent(inputNumCard, numCard, 1, 16)
+            dataEvent(inputNumCard, numCard, 1, 13)
         })
 
         inputMM.addEventListener('input', () => {
@@ -59,10 +66,31 @@ formData()
 
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault()
-
-    if (inputName.value && inputNumCard.value && inputMM.value && inputYY.value && inputCvc.value) {
+    
+    if (inputName.value.length >= 3 && inputNumCard.value.length >= 13 && inputMM.value.length >= 2 && inputYY.value.length >= 2 && inputCvc.value.length >= 3) {
         form.style.display = 'none'
         finishedForm.style.display = 'flex'
     }
+})
 
+confirmBTn.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    inputName.value = ''
+    nameCard.innerHTML = ''
+
+    inputNumCard.value = ''
+    numCard.innerHTML = '0000 0000 0000 0000'
+
+    inputMM.value = ''
+    mmCard.innerHTML = '00'
+
+    inputYY.value = ''
+    yyCard.innerHTML = '00'
+
+    inputCvc.value = ''
+    cvcCard.innerHTML = '000'
+
+    form.style.display = 'flex'
+    finishedForm.style.display = 'none'
 })

@@ -19,7 +19,7 @@
       <img src="./styles/images/card-logo.svg" alt="card logo">
 
       <div class="cardInfoContainer">
-        <div class="cardNum"><span>0000</span><span>0000</span><span>0000</span><span>0000</span></div>
+        <div class="cardNum"><span>0000</span> <span>0000</span> <span>0000</span> <span>0000</span></div>
 
         <div class="cardInfo">
           <span class="nameCard">Gabriel Massensini</span>
@@ -46,8 +46,7 @@
 
         <label for="cardNum">Card Number</label>
         <div>
-          <input type="text" maxlength="16" required name="cardNumber" id="cardNum" placeholder="e.g. 1234 5678 9123 0000"
-            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+          <input type="text" maxlength="16" required name="cardNumber" id="cardNum" placeholder="e.g. 1234 5678 9123 0000" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
           <span class="errorMsg">Can't be blank</span>
         </div>
 
@@ -58,9 +57,9 @@
             <div class="dateInputContainer">
               <div>
                 <input type="text" maxlength="2" id="expDate" class="MM" placeholder="MM"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
                 <input type="text" maxlength="2" id="expDate" class="YY" placeholder="YY"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
               </div>
               <span class="errorMsg">Can't be blank</span>
             </div>
@@ -69,7 +68,7 @@
           <div class="cvcContainer">
             <label for="cvc">CVC</label>
             <div>
-               <input type="text" maxlength="3" id="cvc" placeholder="e.g. 123" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+               <input type="text" maxlength="3" id="cvc" placeholder="e.g. 123" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
                <span class="errorMsg">Can't be blank</span>
             </div>
            
