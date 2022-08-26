@@ -15,7 +15,7 @@ body {
     display: flex;
 }
 
-.bg-gradient {
+.bgGradient {
     width: 30vw;
 
     background-image: url(./images/bg-main-desktop.png);
@@ -25,7 +25,7 @@ body {
     position: relative;
 }
 
-.front-card, .back-card {
+.frontCard, .backCard {
     width: 100%;
     min-width: 410px;
     height: 14rem;
@@ -41,7 +41,7 @@ body {
     color: hsl(0, 0%, 100%); 
 }
 
-.front-card {
+.frontCard {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
@@ -77,7 +77,7 @@ body {
     font-size: 12px;
 }
 
-.back-card {
+.backCard {
     align-items: center;
     justify-content: end;
 
@@ -88,7 +88,7 @@ body {
     background-image: url(./images/bg-card-back.png);
 }
 
-.bg-white {
+.bgWhite {
     width: 70vw;
     padding-right: 10%;
     display: flex;
@@ -114,7 +114,12 @@ label {
     margin-top: 15px;
 }
 
+.inputContainer {
+    width: 100%;
+}
+
 input {
+    width: 100%;
     height: 40px;
     margin-top: 7px;
     padding: 0 5px 0 10px;
@@ -123,14 +128,34 @@ input {
     border-radius: 5px;
 }
 
+.errorMsg {
+    display: none;
+    margin-top: 3px;
+    font-size: 12px;
+    color: hsl(0, 100%, 66%);
+}
+
+.errorMsgActive {
+    display: block;
+}
+
+.inputError {
+    border: 1px solid hsl(0, 100%, 66%);
+}
+
 .dateCvcContainer {
     display: flex;
     justify-content: space-between;
 }
 
 .dateInputContainer {
-    display: flex;   
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dateInputContainer div {
+    display: flex;
+    gap: 5px;
 }
 
 #expDate {
@@ -151,6 +176,7 @@ input {
 button {
     margin-top: 20px;
     height: 40px;
+    width: 100%;
 
     border-radius: 5px;
     background: hsl(278, 68%, 11%);
@@ -164,9 +190,28 @@ button:hover {
     opacity: 0.8;
 }
 
-.errorMsg {
+.finished {
+    width: 100%;
+    
     display: none;
-    font-size: 12px;
-    margin-top: 3px;
-    color: hsl(0, 100%, 66%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.finished img {
+    width: 23%;
+}
+
+.finished h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: hsl(278, 68%, 11%);
+    margin-top: 20px;
+}
+
+.finished p {
+    font-size: 15px;
+    color: hsl(279, 6%, 55%);
+    margin-top: 15px;
 }
