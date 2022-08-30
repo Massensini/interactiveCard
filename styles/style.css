@@ -3,8 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    border: none;
-    outline: none;
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
 }
@@ -18,19 +16,29 @@ body {
     align-items: center;
 }
 
+/*Card design*/
+
 .card-container {
     width: 100%;
-    max-width: 800px;
     height: 35%;
-    padding: 20px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     background-image: url(./images/bg-main-mobile.png);
     background-size: cover;
 }
 
+.card-content {
+    width: 85%;
+    max-width: 400px;
+    margin-top: 3%;
+    height: 100%;
+    position: relative;
+}
+
 .card {
-    width: 75%;
+    width: 100%;
     max-width: 375px;
     aspect-ratio: 2/1;
     position: absolute;
@@ -40,7 +48,8 @@ body {
 }
 
 .front-card {
-    margin-top: 25%;
+    margin-top: 7.5rem;
+    margin-left: -8%;
     background-image: url(./images/bg-card-front.png);
 
     display: grid;
@@ -75,8 +84,7 @@ body {
 }
 
 .back-card {
-    margin-top: 2%;
-    margin-left: 15%;
+    margin-left: 8%;
     background-image: url(./images/bg-card-back.png);
     display: flex;
     align-items: center;
@@ -87,10 +95,129 @@ body {
     color: hsl(0, 0%, 100%);
     margin-top: 10px;
     margin-right: 20px;
+    font-size: 1.3rem;
 }
 
-@media screen and (min-width: 530px) {
+/*Form design*/
+
+.form-container {
+    width: 100%;
+    margin-top: 23%;
+}
+
+.form {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.inp-container, .date-cvc-container  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: hsl(278, 68%, 11%);
+    letter-spacing: 1px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+
+    background-color: hsl(270, 3%, 87%);
+    border-radius: 5px;
+    border: 1px solid hsl(279, 6%, 55%);
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid hsl(278, 94%, 30%);
+}
+
+.date-cvc-container {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.date-inp-container{
+    display: flex;
+    gap: 10px;
+}
+
+.submit-btn {
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    font-size: 1.1rem;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, hsl(249, 99%, 64%),hsl(278, 94%, 30%));
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    } 
+/*Card design*/
+    .card-container {
+        width: 45%;
+        max-width: 500px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    
+        background-image: url(./images/bg-main-desktop.png);
+    }
+
+    .card-content {
+        width: 100%;
+        height: 50%;
+    }
+
+    .card {
+        position: initial;
+    }
+
     .front-card {
-        margin-top: 140px;
-    }        
+        margin-top: 0;
+        margin-left: 25%;
+    }
+
+    .card-num {
+        font-size: 1.8rem;
+    }
+
+    .card-info {
+        font-size: 1rem;
+    }
+    
+    .back-card {
+        margin-left: 35%;
+        margin-top: 15px;
+    }
+
+/*Form design*/
+
+    .form-container {
+        width: 45%;
+        margin-left: 10%;
+        margin-top: 0;
+    }
+
+    .form {
+        max-width: 370px;
+    }
 }
