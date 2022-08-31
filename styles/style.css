@@ -103,6 +103,7 @@ body {
 .form-container {
     width: 100%;
     margin-top: 23%;
+    display: flex;
 }
 
 .form {
@@ -156,14 +157,53 @@ input:focus {
 }
 
 .submit-btn {
+    margin-top: 1rem;
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
     font-size: 1.1rem;
+    transition: all 0.3s ease-in;
 }
 
-.submit-btn:hover {
+/*FORM Finish*/
+
+.finishedForm {
+    width: 65%;
+    max-width: 400px;
+    margin-top: 25%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finishedForm h3 {
+    margin-top: 1.5rem;
+    color: hsl(278, 68%, 11%);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.finishedForm p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: hsl(279, 6%, 55%);
+}
+
+.finishedForm button {
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 2.4rem;
+    background: hsl(278, 68%, 11%);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: white;
     cursor: pointer;
-    background: linear-gradient(to left, hsl(249, 99%, 64%),hsl(278, 94%, 30%));
+    transition: all 0.4s ease-in;
+}
+
+.submit-btn:hover, .finishedForm button:hover {
+    cursor: pointer;
+    background: hsl(278, 94%, 30%);
 }
 
 @media screen and (min-width: 900px) {
@@ -219,5 +259,36 @@ input:focus {
 
     .form {
         max-width: 370px;
+    }
+/*FINISHED Form*/
+
+    .finishedForm {
+        margin-top: 0;
+        margin-left: 25%;
+    }
+
+    .finishedForm h3 {
+        margin-top: 1.5rem;
+        color: hsl(278, 68%, 11%);
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    .finishedForm p {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        color: hsl(279, 6%, 55%);
+    }
+
+    .finishedForm button {
+        margin-top: 1.5rem;
+        width: 100%;
+        height: 2.4rem;
+        background: hsl(278, 68%, 11%);
+        border: none;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        color: white;
+        cursor: pointer;
     }
 }
