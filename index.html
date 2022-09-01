@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/style.css">
 
-  <script defer  src="./JS/formatInput.js"></script>
+  <script defer src="./JS/formatInput.js"></script>
   <script defer src="./JS/main.js"></script>
 
   <title>Frontend Mentor | Interactive card details form</title>
@@ -43,12 +43,15 @@
     <form class="form">
       <div class="inp-container">
         <label for="inp-name" class="label">Cardholder Name</label>
-        <input type="text" name="inp-name" id="inp-name" maxlength="20" required placeholder="e.g. Jane Appleseed">
+        <input type="text" name="inp-name" id="inp-name" maxlength="25" required placeholder="e.g. Jane Appleseed">
+        <span class="error-msg"></span>
       </div>
 
       <div class="inp-container">
         <label for="inp-num" class="label">Card Number</label>
-        <input type="text" name="inp-num" id="inp-num" maxlength="16" placeholder="e.g. 1234 5678 9123 0000" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+        <input type="text" name="inp-num" id="inp-num" maxlength="19" placeholder="e.g. 1234 5678 9123 0000"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+        <span class="error-msg"></span>
       </div>
 
       <div class="date-cvc-container">
@@ -57,13 +60,20 @@
             Exp. Date (<label for="mounth">MM</label>/<label for="year">YY</label> )
           </span>
           <div class="date-inp-container">
-            <input type="text" name="mounth" id="mounth" maxlength="2" placeholder="MM" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-            <input type="text" name="year" id="year" maxlength="2" placeholder="YY" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+            <div class="date-inp">
+              <input type="text" name="mounth" id="mounth" maxlength="2" placeholder="MM"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+              <input type="text" name="year" id="year" maxlength="2" placeholder="YY"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+            </div>
+            <span class="error-msg"></span>
           </div>
         </div>
         <div class="inp-container">
           <label for="cvc" class="label">CVC</label>
-          <input type="text" name="cvc" id="cvc" class="inp-cvc" maxlength="3" placeholder="e.g. 123" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+          <input type="text" name="cvc" id="cvc" class="inp-cvc" maxlength="3" placeholder="e.g. 123"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+          <span class="error-msg"></span>
         </div>
       </div>
 
@@ -71,20 +81,14 @@
     </form>
   </section>
 
-  <section class="finishedForm">
+  <section class="finished-form">
     <img src="./styles/images/icon-complete.svg" alt="complete">
 
     <h3>Thank you!</h3>
     <p>We've added your card details</p>
 
-    <button class="confirmBTn">Continue</button>
-  </section> <!--
-  
-
-  
-  
-  
--->
+    <button class="confirm-btn">Continue</button>
+  </section>
 </body>
 
 </html>
